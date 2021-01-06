@@ -100,5 +100,11 @@ for expansions, as well as unlikely contractions as needed.  When it comes to us
 A jump box is a way to remotely control environments through an SSH connection.  This allows one person, 
 at a central location to control the push and pull actions throughout the enterprise.  
 
-Disadvantages of VPN?
+There are however, disadvantages of a VPN.  One of the most common complaints is the possibility of slowing
+your internet connection speed.  Due to the nature of exchanging data over a VPN, things can get slow and
+laggy.  Another posibility is that as the network grows, it could be difficult to configure out to scale.
+This can be avoided with the right team dedicated to the expansion of the network, and a solid start 
+that is designed to build at scale.  
+
+
 
