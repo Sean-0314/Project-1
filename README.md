@@ -6,11 +6,11 @@ The files in this repository were used to configure the network depicted below.
 
 *NOTE I removed any actual personal IP addresses used to avoid that being published.  You will see it written as **MYIP** within the following pages.
 
-(Images/diagram_filename.png)
+WK-12-network.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+elk-playbook.yml
 
 This document contains the following details:
 - Description of the Topologu
@@ -56,7 +56,6 @@ The configuration details of each machine may be found below.
 
 ### Access Policies
 
-
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Jump Box Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the following IP address:
@@ -64,8 +63,8 @@ Only the Jump Box Provisioner machine can accept connections from the Internet. 
 
 Machines within the network can only be accessed by the Jump Box Provisioner.  The current configuration allows only for my personal IP to gain access to the ELK Virtual Machine by remoting into my Jump Box Provisioner and ultimately through the Ansible container.
 
-
 A summary of the access policies in place can be found in the table below.
+
 
 | Name     | Public Access | Allowed IP Addresses | OS    |
 |----------|---------------|----------------------|-------|
@@ -73,6 +72,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-1    | no            |  52.250.106.163      | Linux |
 | Web-2    | no            |  52.250.106.163      | Linux |
 | Web-3    | no            |  52.250.106.163      | Linux |
+
 
 ### Elk Configuration
 
