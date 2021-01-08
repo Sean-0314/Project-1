@@ -9,13 +9,13 @@ The question posed is what if I was to find a server running HTTP on port 80, in
 compliance guidelines of requiring encryption.  
 
 Within a recent project completed in Azure for the Cybersecurity Bootcamp at the University of Denver, 
-wewere directed to initially set up the same issue.  In order for the class scenarios to work on a 
+we were directed to initially set up the same issue.  In order for the class scenarios to work on a 
 DVWA, traffic had to be left unsecured.  Network security groups were created with priorities set that
 allow for this inbound traffic to occur.  
 
 Within a real deployment, I would set the Jump Box Provisioner virtual machine to not allow for 
 unsecured, or HTTP traffic without additional network security group rules on inbound traffic that 
-filter for UDP protocols.  That ++++++++
+filter for valid HTTP servers.  That ++++++++
 
 
 Domain Cloud Security
@@ -32,14 +32,14 @@ firewalls and Network Security Groups (NSGs).  WIthin this project,  a jump box 
 used as a way to configure each of the container deployments within one centralized access point.  
 There are significant advantages to deployments such as this.  
 Here are just a few:
-Minimal Investment in Equipment With the servers, switches, and firewalls being virtual, there are 
+Minimal Investment in Equipment - With the servers, switches, and firewalls being virtual, there are 
 no expensive server rooms to manage on site.  No busy cables or cooling systems to keep it all functioning.
 Not to mention the on-premise security that would need to be provided.  
-Overhead Costs There are of course costs to virtual deployments.  The advantage for businesses that
+Overhead Costs - There are of course costs to virtual deployments.  The advantage for businesses that
 are growing is the costing is scalable, with upgrades performed in an instant, without the worry of
 outdated equipment being part of the costing or depreciation considerations.  The size and value of
 equipment available virtually is endless.
-Less is More Virtual Machines (VMs) and individual processing power applications can get expensive.  
+Less is More - Virtual Machines (VMs) and individual processing power applications can get expensive.  
 When using a container deployment, the amount of storage and processing speed is significantly less
 over the span of the larger operation.  That means containers do not require multiple technicians to
 configure and update each workspace.  Instead, updates, protocols, storage and even cleanups can be 
@@ -52,20 +52,20 @@ the jump box server.
 
 Since the jump box controls all of the commerce and MX servers, this required the most stringent of 
 controls to include the following inbound rules:
-Allow Personal to SSH Since I would be managing the network remotely, I needed to ensure that I would be
+Allow Personal to SSH - Since I would be managing the network remotely, I needed to ensure that I would be
 able to remote in from my home computer through a secured connection.  The control was set to allow only
 TCP traffic from my home IP address to the local IP address of the jump box on port 22 (SSH connections).  
-Allow Jump Box to Web SSH  The next protocol to configure was to allow the jump box to use an SSH connection
+Allow Jump Box to Web SSH - The next protocol to configure was to allow the jump box to use an SSH connection
 on any port to communicate with servers within the virtual network using port 22.  
-Allow HTTP from the Internet In order to receive the necessary data over the internet, a rule was set up
+Allow HTTP from the Internet - In order to receive the necessary data over the internet, a rule was set up
 to allow HTTP traffic from the internal virtual network back to my personal or home IP address.
 
-Load Balancer Communication A default rule was already in place to allow the load balance to communicate 
+Load Balancer Communication - A default rule was already in place to allow the load balance to communicate 
 over any port, with any protocol, within the virtual network.  
 
 Thank you Azure for making simple defaults!
 
-Deny All Inbound Finally, after all these rules were met, a final rule of denying all inbound traffic that
+Deny All Inbound - Finally, after all these rules were met, a final rule of denying all inbound traffic that
 is otherwise not specifically mentioned above.  
 
 Once again, this was a default that Azure recognizes and puts in place as a last catch safety net!
@@ -74,8 +74,8 @@ For the ELK or Elastic Stack, a separate security group was created to control a
 Since this was built within Azure, the above defaults were also already included.  Pretty sweet!   
 
 The inbound rules that needed to be added were the following:
-Allow SSH All TCP ~ traffic arriving on port 22 would be allowed
-Personal to ELK ~ A rule put in place that restricts access to the ELK secure network by only allowing
+Allow SSH All TCP - traffic arriving on port 22 would be allowed
+Personal to ELK - A rule put in place that restricts access to the ELK secure network by only allowing
 a connection through my local or home IP as configured.
 
 With those inbound rules in place, another consideration was the outbound rules for the security group.
@@ -83,11 +83,9 @@ For this deployment, the default rules in place were all that was necessary for 
 Those included allowing outbound communication over the internal network and the greater internet.  
 
 (PART 3) Within project 1, I had to consider the access controls around the Virtual Network and the 
-Virtual Machines.  Because this environment was set up as a DVWA, there were no local firewalls put in place.  
+Virtual Machines.    
 Traffic was limited to the web servers as being ultimately denied both inbound and outbound traffic as a 
 full-stop solution.  
-This, however, would not be practical in a real world application if this was a commercial enterprise.  
-We would have to remove the priority 65500 default rules that deny all inbound and outbound traffic.
 
 Azure has the setup and build out phase like this to ensure all applications and rules are in place before
 opening the metaphorical floodgates if you will.  
