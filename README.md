@@ -32,13 +32,13 @@ Load balancers work on layers 4-7 of the OSI model (transport, session applicati
 
 
 -Question Posed: What is the advantage of a jump box?
-A jump box or jump server makes things simple since it’s one place where direction and commands can be sent out to multiple devices.  This includes the ability for administrators to quickly make changes across multiple virtual machines and in some cases, across multiple regions at the same time.  The jump is monitored and kept within a separate security zone than other devices.  This limits the exposure of the other virtual machines to the internet.
+A jump box or jump server makes things simple since it’s one place where direction and commands can be sent out to multiple devices.  This includes the ability for administrators to quickly make changes across multiple virtual machines and in some cases, across multiple regions at the same time.  The jump box is monitored and kept within a separate security zone than other devices.  This limits the exposure of the other virtual machines to the internet.
 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the configuration and system files.
 
 -Question Posed: What does Filebeat watch for?
-Filebeat is used to monitor log files from locations that the user specifies.  It collects lof events and then forwards them on to Elasticsearch or Logstash for indexing, all the while being very lightweight.  
+Filebeat is used to monitor log files from locations that the user specifies.  It collects these events and then forwards them on to Elasticsearch or Logstash for indexing, all the while being very lightweight.  
 
 
 -Question Posed: What does Metricbeat record?
@@ -93,7 +93,10 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- 10.0.0.1
+- 10.0.0.7
+- 10.0.0.13
+- 10.0.0.14
 
 We have installed the following Beats on these machines:
 Filebeat
@@ -106,11 +109,11 @@ Filebeat collects log data that is entering the network, while Metricbeat collec
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the rsa-key file to Azure .
-- Update the host file to include...
+- Copy the rsa-key file to Azure 
+- Update the host file to include the web servers
 - Run the playbook, and navigate to Kibana to check that the installation worked as expected.
 
 
 
 -Question Posed: Which URL do you navigate to in order to check that the ELK server is running?
-http://104.43.228.135:5601/app/kibana
+- To check if its working, I used the following URL: http://104.43.228.135:5601/app/kibana
