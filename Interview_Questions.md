@@ -1,9 +1,10 @@
-##Project Questions
+##The Interview
+The following questions were regarding the outcome of the project and were to be a simulated interview
+situation.  
 
-#The following questions were regarding the outcome of the project.
-
-Domain Network Security
-Faulty Firewall Question 1:
+Domain Network Security: 
+Suppose you have a firewall that's supposed to block SSH connections, but instead lets them through. 
+How would you debug it?:
 
 It is important for organizations to have established network security protocols in place.  These protocols
 should include the first line of defense in monitoring incoming and outgoing network traffic such as a firewall.  
@@ -45,8 +46,10 @@ As technology grows, so do the paths to implementation. It is best to keep an um
 nothing new or just released is not a consideration!
 
 
+##The Cloud
+
 Domain Cloud Security
-Question 1 Cloud Access Control 
+How would you control access to a cloud network?:
 
 It is important to control access to the cloud network.  Without controls, it is as if you are giving
 away the keys to the castle that is your enterprise.
