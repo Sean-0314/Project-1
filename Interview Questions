@@ -11,11 +11,11 @@ compliance guidelines of requiring encryption.
 Within a recent project completed in Azure for the Cybersecurity Bootcamp at the University of Denver, 
 we were directed to initially set up the same issue.  In order for the class scenarios to work on a 
 DVWA, traffic had to be left unsecured.  Network security groups were created with priorities set that
-allow for this inbound traffic to occur.  
+allow for this inbound traffic to occur.  Ultimately, there are options to control this.  
 
-Within a real deployment, I would set the Jump Box Provisioner virtual machine to not allow for 
-unsecured, or HTTP traffic without additional network security group rules on inbound traffic that 
-filter for valid HTTP servers.  That ++++++++
+The first option would be to redirect all HTTP traffic on port 80 to go to port 443, forcing this traffic
+to be secured HTTPS.  Other than removing all HTTP traffic on Port 80, this may be the most secure option.
+Another option would be to setup a Network Security Group that stops all inbound HTTP traffic on port 80.
 
 
 Domain Cloud Security
