@@ -3,19 +3,46 @@
 #The following questions were regarding the outcome of the project.
 
 Domain Network Security
-Unsecured Web Server Question 2:
+Faulty Firewall Question 1:
 
-The question posed is what if I was to find a server running HTTP on port 80, in direct conflict with 
-compliance guidelines of requiring encryption.  
+It is important for organizations to have established network security protocols in place.  These protocols
+should include the first line of defense in monitoring incoming and outgoing network traffic such as a firewall.  
+Within Project 1 at the University of Denver Cybersecurity Bootcamp, I built an Azure virtual network 
+with three web servers controlled by a Jump Box Provisioner.  All commands given were over a secured 
+SSH connection on port 22.  If you tried to connect to a VM within this network that did not accept SSH 
+connections; you would be denied.  A network Security Group Rule was created to ensure that only connections
+within the virtual network, and through a specific internal IP (Jump Box Server) could be established.  
+This creates a network of secured tunnels for information to pass through, limiting outside attacks.
 
-Within a recent project completed in Azure for the Cybersecurity Bootcamp at the University of Denver, 
-we were directed to initially set up the same issue.  In order for the class scenarios to work on a 
-DVWA, traffic had to be left unsecured.  Network security groups were created with priorities set that
-allow for this inbound traffic to occur.  Ultimately, there are options to control this.  
+If I was told that one of the Web servers within the network I created did accept an SSH connection, 
+I would ensure that the Network Security Group rules I created had the correct source and destination 
+IP addresses, as well as the correct port protocols in place.  
+To ensure that the problem was fixed, I would again attempt to remotely control the server through an SSH
+connection with the incorrect IP address that was brought to my attention.  This would require looking at
+the Network Security Groups that I created.  As you can see in the image included below, the rule labeled 
+SSH_From_Jump_Box would be a great place to start. 
 
-The first option would be to redirect all HTTP traffic on port 80 to go to port 443, forcing this traffic
-to be secured HTTPS.  Other than removing all HTTP traffic on Port 80, this may be the most secure option.
-Another option would be to setup a Network Security Group that stops all inbound HTTP traffic on port 80.
+![alt text] (. ) 
+
+This is where either the edits would need to be made or would lead me towards creating an additional
+rule with a higher priority (the lower number assigned) to ensure it was in place and acted on 
+before moving to other network connections.   
+
+Additionally, I would also test this with a larger range to ensure that all connections outside the scope
+of the internal rule would not manifest.   
+A solution such as this does not entirely guarantee that this network is immune to all unauthorized access.
+The difficulty of the limited controls means it necessary to continually monitor the servers.  
+Additionally, any expansion or additional servers, load balancers, or even networks added may require changes.  
+With the currently limited control of the server, the network is entirely dependant on one connection from 
+outside the network.  This could be a challenge when it comes to events such as power outages to employee movement.  
+A system like this would need additional controls within a live environment.  In order to monitor 
+potentially suspicious authentication attempts, I would also add steps to monitor events such as data packet
+capture analysis that could be installed on a Linux machine.  I would also protect the virtual networks by
+adding an Azure Firewall and enabling a vulnerability assessment solution that is provided through Azure
+to ensure thought has been given to the configuration beyond just my personal recommendations.  
+
+As technology grows, so do the paths to implementation. It is best to keep an umbrella policy in place to ensure
+nothing new or just released is not a consideration!
 
 
 Domain Cloud Security
