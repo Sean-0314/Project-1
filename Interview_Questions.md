@@ -112,8 +112,7 @@ With those inbound rules in place, another consideration was the outbound rules 
 For this deployment, the default rules in place were all that was necessary for both security groups.  
 Those included allowing outbound communication over the internal network and the greater internet.  
 
-(PART 3) Within project 1, I had to consider the access controls around the Virtual Network and the 
-Virtual Machines.    
+Within project 1, I had to consider the access controls around the Virtual Network and the Virtual Machines.    
 Traffic was limited to the web servers as being ultimately denied both inbound and outbound traffic as a 
 full-stop solution.  
 
