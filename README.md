@@ -1,10 +1,8 @@
-# HW_12 Azure Project 1
+# Azure Virtual Network: Project 1
 
 ## Automated ELK Stack Deployment
 
 The files in this repository were used to configure the network depicted below.  
-
-*NOTE I removed any actual personal IP addresses used to avoid that being published.  You will see it written as **MYIP** within the following pages.
 
 ![alt text](https://github.com/sshsjames/Project-1/blob/main/WK-12-network.png)
 
@@ -117,3 +115,7 @@ SSH into the control node and follow the steps below:
 
 -Question Posed: Which URL do you navigate to in order to check that the ELK server is running?
 - To check if its working, I used the following URL: http://104.43.228.135:5601/app/kibana
+
+
+*NOTE I removed any actual personal IP addresses used to avoid that being published.  You will see it written as **MYIP** within the project pages.  
+Additionally, it will be removed from all PNG files.  
