@@ -1,6 +1,6 @@
-#Exploring Kibana
+## Exploring Kibana
 
-## Answers to first questions regarding the Kibana output from the sample data:
+Answers to first questions regarding the Kibana output from the sample data:
 *NOTE I set the date 12/12-12/19 to answer these:
 
 In the last 7 days, 249 unique visitors were from India
@@ -42,12 +42,17 @@ What are the geo coordinates of this activity?
 What OS was the source machine running? 
 OSX
 
-What is the full URL that was accessed? https://elastic-elastic-elastic.org/people/
+What is the full URL that was accessed?
+
+https://elastic-elastic-elastic.org/people/
+
 type:astronauts/name:andrei-borisenko/profile
-From what website did the visitor's traffic originate? http://facebook.com/error/neil-woodward
+
+From what website did the visitor's traffic originate? 
+
+http://facebook.com/error/neil-woodward
 
 ##Finish investigation with a short overview of insights...
-
 
 What do you think the user was doing?
 Looking up an astronaut!
