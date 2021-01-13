@@ -20,7 +20,7 @@ with almost 16,000 bytes of data.
 All of this data was from originating in India, with a destination within China.  
 The data appears to be a successful transfer of HTTP data (response code 200).  
 
-##Filter the data Answers
+## Filter the data Answers
 
 What is the timestamp for this event? December 14th at 1800hrs
 What kind of file was downloaded? Rpm file
@@ -28,7 +28,7 @@ From what country did this activity originate?  India
 What HTTP response codes were encountered by this visitor? 200
 
 
-##Switch to the Kibana Discover Page Answers
+## Switch to the Kibana Discover Page Answers
 
 
 What is the source IP address of this activity?  85.255.36.162
@@ -52,7 +52,7 @@ From what website did the visitor's traffic originate?
 
 http://facebook.com/error/neil-woodward
 
-##Finish investigation with a short overview of insights...
+## Finish investigation with a short overview of insights...
 
 What do you think the user was doing?
 Looking up an astronaut!
