@@ -8,15 +8,15 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
-elk-playbook.yml
 
-This document contains the following details:
+This project contains the following details:
 - Description of the Topology
-- Access Policies
-- ELK Configuration
-  - Beats in Use
+- Access Policies / NSGs for the Azure network
+- ELK Configurations
+  - Beats in Use (Filebeat and Metricbeat)
   - Machines Being Monitored
-- How to Use the Ansible Build
+- Answers to Questions regarding Kibana sample data
+- (2) Interview questions selected from the choices given
 
 
 ### Description of the Topology
@@ -76,8 +76,10 @@ A summary of the access policies in place can be found in the table below.
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because this allows for quick changes and implementation across multiple VMs with a simple change to the playbook within the ELK machine.  
 
-The playbook implements the following tasks.
-The elk-playbook.yml file is explained in the following steps:
+# The playbook implements the following tasks:
+
+The elk-playbook.yml file was created and explained in the following steps:
+
 The first step or command is to install docker.io.  
 Install python3-pip
 Install Docker module
@@ -96,24 +98,16 @@ This ELK server is configured to monitor the following machines:
 - 10.0.0.13
 - 10.0.0.14
 
-We have installed the following Beats on these machines:
+I have installed the following Beats on these machines:
 Filebeat
 Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-Filebeat collects log data that is entering the network, while Metricbeat collects the metrics from the installed packages.  
-
-### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
-
-SSH into the control node and follow the steps below:
-- Copy the rsa-key file to Azure 
-- Update the host file to include the web servers
-- Run the playbook, and navigate to Kibana to check that the installation worked as expected.
-
+Filebeat collects log data that is entering the network, while Metricbeat collects the metrics from the installed packages.
 
 
 -Question Posed: Which URL do you navigate to in order to check that the ELK server is running?
+
 - To check if its working, I used the following URL: http://104.43.228.135:5601/app/kibana
 
 
