@@ -1,3 +1,4 @@
+#Exploring Kibana
 
 ## Answers to first questions regarding the Kibana output from the sample data:
 *NOTE I set the date 12/12-12/19 to answer these:
