@@ -122,7 +122,7 @@ opening the metaphorical floodgates if you will.
 It’s kind of like setting up the storefront on black friday, only to save the unlocking of the front doors
 until the very last moment, when everything else is in place.  
 
-(PART 5) A solution like this is very scalable.  In fact, all of the Ansible environment is quickly scalable
+A solution like this is scalable.  In fact, all of the Ansible environment is quickly scalable
 for expansions, as well as unlikely contractions as needed.  When it comes to using a jump box, there are better
 (or more secure) solutions.  
 A jump box is a way to remotely control environments through an SSH connection.  This allows one person, 
