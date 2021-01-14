@@ -1,7 +1,10 @@
 ## Exploring Kibana
 
-Answers to first questions regarding the Kibana output from the sample data:
-*NOTE I set the date 12/12-12/19 to answer these:
+Answers to first questions regarding the Kibana output from the sample data taken from the Kibana Dashboard
+
+![alt text](https://github.com/sshsjames/Project-1/blob/main/Kibana_Dashboard.png) 
+
+*NOTE  The above is just an example.  I set the date 12/12-12/19 to answer the following:
 
 In the last 7 days, 249 unique visitors were from India
 In the last 24 hours, 16.67% of the visitors from China were using Mac OSX
@@ -29,6 +32,10 @@ What HTTP response codes were encountered by this visitor? 200
 
 
 ## Switch to the Kibana Discover Page Answers
+
+![alt text](https://github.com/sshsjames/Project-1/blob/main/Kibana_Discover.png)
+
+*Note The above is just an example taken of where I pulled the information from.
 
 
 What is the source IP address of this activity?  85.255.36.162
