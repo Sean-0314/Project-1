@@ -2,7 +2,7 @@
 
 Answers to first questions regarding the Kibana output from the sample data taken from the Kibana Dashboard
 
-![alt text](https://github.com/sshsjames/Project-1/blob/main/Kibana_Dashboard.png) 
+![alt text](https://github.com/sshsjames/Project-1/blob/main/Images/Kibana_Dashboard.png) 
 
 *NOTE  The above is just an example.  I set the date 12/12-12/19 to answer the following:
 
@@ -37,7 +37,7 @@ What HTTP response codes were encountered by this visitor? -200
 
 ## Switch to the Kibana Discover Page Answers
 
-![alt text](https://github.com/sshsjames/Project-1/blob/main/Kibana_Discover.png)
+![alt text](https://github.com/sshsjames/Project-1/blob/main/Images/Kibana_Discover.png)
 
 *Note The above is just an example taken of where I pulled the information from.
 
