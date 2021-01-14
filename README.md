@@ -4,7 +4,7 @@
 
 The files in this repository were used to configure the network depicted below.  
 
-![alt text](https://github.com/sshsjames/Project-1/blob/main/WK-12-network.png)
+![alt text](https://github.com/sshsjames/Project-1/blob/main/Images/WK-12-network.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the YAML file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -89,7 +89,7 @@ Download and launch Docker container
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![alt text](https://github.com/sshsjames/Project-1/blob/main/DockerPS.png) 
+![alt text](https://github.com/sshsjames/Project-1/blob/main/Images/DockerPS.png) 
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
