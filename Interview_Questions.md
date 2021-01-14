@@ -1,4 +1,4 @@
-# The Interview
+# Interview Questions
 The following questions were regarding the outcome of the project and were to be a simulated interview
 situation.  
 
@@ -23,7 +23,7 @@ connection with the incorrect IP address that was brought to my attention.  This
 the Network Security Groups that I created.  As you can see in the image included below, the rule labeled 
 SSH_From_Jump_Box would be a great place to start. 
 
-![alt text](https://github.com/sshsjames/Project-1/blob/main/NSG_Example.png) 
+![alt text](https://github.com/sshsjames/Project-1/blob/main/Images/NSG_Example.png) 
 
 This is where either the edits would need to be made or would lead me towards creating an additional
 rule with a higher priority (the lower number assigned) to ensure it was in place and acted on 
